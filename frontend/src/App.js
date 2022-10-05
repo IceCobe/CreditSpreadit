@@ -1,11 +1,12 @@
-import './App.css';
+import './App.css'
+import CreditList from './components/CreditList'
 
 function App() {
   return (
     <div className="App">
-      <p>Hello!</p>
+      <CreditList />
     </div>
   );
 }
 
-export default App;
+export default App
