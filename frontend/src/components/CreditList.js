@@ -10,7 +10,7 @@ export default function CreditList() {
         <div className="credit-list">
             <h2>CreditCard List</h2>
             <ul>
-                {creditcards.map(card => (
+                {creditcards && creditcards.map(card => (
                 <li key={card.id}>
                     <h3>{card.name}</h3>
                     <p>{card.company}</p>
