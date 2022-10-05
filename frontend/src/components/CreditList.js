@@ -16,7 +16,11 @@ export default function CreditList() {
         <li key={card.id}>
           <h3>{card.name}</h3>
           <p>{card.company}</p>
-          {card.bonuses.map(bonus => (<p>{bonus}</p>))}
+          {card.bonuses.map(bonus => (
+            <li key={bonus.id}>
+              <p>{bonus}</p>
+            </li>
+          ))}
         </li>
         ))}
       </ul>

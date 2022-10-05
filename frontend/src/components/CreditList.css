@@ -1,25 +1,25 @@
 .credit-list {
-    width: 480px;
-    margin: 60px auto;
+  width: 480px;
+  margin: 60px auto;
 }
 .credit-list ul {
-    padding: 0;
+  padding: 0;
 }
 .credit-list li {
-    border: 1px solid #e4e4e4;
-    box-sizing: border-box;
-    padding: 10px;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.05);
-    border-radius: 4px;
-    list-style-type: none;
-    margin: 20px 0;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 4px 4px 6px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  list-style-type: none;
+  margin: 20px 0;
 }
 .credit-list .filters {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .credit-list button {
-    padding: 10px;
-    font-size: 16px;
-    flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  flex-grow: 1;
 }
