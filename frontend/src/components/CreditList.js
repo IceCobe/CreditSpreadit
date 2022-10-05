@@ -2,29 +2,21 @@ import { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import './CreditList.css'
 
-export default function TripList() {
-    const [url, setUrl] = useState('http://localhost:3000/credit')
-    const { data: creditcard } = useFetch(url)
+export default function CreditList() {
+    const [url, setUrl] = useState('http://127.0.0.1:8000/api/creditspreadit/')
+    const { data: creditcards } = useFetch(url)
 
     return (
-        <div className="trip-list">
+        <div className="credit-list">
             <h2>CreditCard List</h2>
             <ul>
-                {credit && creditcard.map(card => (
+                {creditcards.map(card => (
                 <li key={card.id}>
-                    <h3>{card.title}</h3>
-                    <p>{card.price}</p>
+                    <h3>{card.name}</h3>
+                    <p>{card.company}</p>
                 </li>
                 ))}
             </ul>
-            <div className="filters">
-                <button onClick={() => setUrl('http://localhost:3000/cardss?company=Discover')}>
-                Discover Cards
-                </button>
-                <button onClick={() => setUrl('http://localhost:3000/cards')}>
-                All Cards
-                </button>
-            </div>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .serializers import CreditSpreaditSerializer 
+from rest_framework import viewsets      
+from .models import CreditCard                 
 
-# Create your views here.
-def hello_world(request):
-    return HttpResponse("Hello, World!")
+class CreditSpreaditView(viewsets.ModelViewSet):  
+    serializer_class = CreditSpreaditSerializer
+    queryset = CreditCard.objects.all()
