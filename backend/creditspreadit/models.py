@@ -32,6 +32,7 @@ class Bonus(models.Model):
             return "{}% cashback on {} during {}".format(self.cashback, self.category.all()[0], self.dates)
         else:
             return "{}% cashback on top category between during {}".format(self.cashback, self.dates)
+            
 class CreditCard(models.Model):
     name = models.CharField(max_length=100, verbose_name="Card Name")
     company = models.CharField(max_length=30, verbose_name="Card Company")
