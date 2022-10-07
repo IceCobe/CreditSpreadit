@@ -15,16 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include               
-from rest_framework import routers                 
-from creditspreadit import views                             
 
-router = routers.DefaultRouter()                   
-router.register('daterange', views.DateRangeView)  
-router.register('category', views.CategoryView)  
-router.register('bonus', views.BonusView)  
-router.register('creditcard', views.CreditCardView)  
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))             
+    path('creditspreadit/', include('creditspreadit.urls'))             
 ]
